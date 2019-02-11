@@ -1,0 +1,36 @@
+<!-- <div class="chatbox">
+  <div class="messages">
+       <h3>Your conversations</h3>
+       <div *ngFor="let conv of nestedConv?.conversations" > 
+           <div *ngFor="let c of conv" > 
+                <strong>{{c.body}}</strong> at {{c.updatedAt | date }} 
+            - <button (click)="getMessages(c.conversationId)">CHAT</button> -
+            <button (click)="reply(c.conversationId)">Send</button>
+           </div>
+       </div>
+ </div>
+</div>
+
+<div>
+     <div *ngFor="let c of getConv?.conversation | reverse" > 
+        <strong>{{c.body}}</strong> : {{c.author.username}} at {{c.createdAt | date }}
+     </div>
+    <input type="text" placeholder="Place your message here" [(ngModel)]="composedMessage">
+</div> -->
+
+<div class="left">
+    <app-chat-list
+      [conversations]="chatService.conversations"
+      [conversationId]="chatService.conversation?.conversationId"
+      (selectConversation)="onSelectConv($event)">
+    </app-chat-list>
+  </div>
+  <div class="right">
+    <app-chat-messages
+      [getConv]="chatService.conversations">
+    </app-chat-messages>
+    <app-chat-area-bottom
+      [conversationId]="chatService.conversation?.conversationId"
+      (sendMessage)="onSendMessage($event)">
+    </app-chat-area-bottom>
+  </div>

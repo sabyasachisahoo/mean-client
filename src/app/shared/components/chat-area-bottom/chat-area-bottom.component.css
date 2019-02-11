@@ -1,0 +1,9 @@
+.wrapper {
+    padding: 0 .5rem;
+    bottom: 1rem;
+    position: fixed;
+  }
+
+  input {
+    width: 70vw;
+  }

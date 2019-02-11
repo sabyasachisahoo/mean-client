@@ -1,0 +1,14 @@
+.wrapper {
+    list-style-type: none;
+    padding: 0 .5rem;
+    height: 80vh;
+    overflow: scroll;
+  }
+
+  .name {
+    font-weight: bold;
+  }
+
+  .timestamp {
+    color: #aaa;
+  }

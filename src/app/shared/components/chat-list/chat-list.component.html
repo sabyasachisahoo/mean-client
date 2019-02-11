@@ -1,0 +1,14 @@
+<h3>Your conversations</h3>
+<div *ngFor="let conv of nestedConv?.conversations" >
+  <ul> 
+    <li *ngFor="let c of conv" (click)="onSelectConv(c.conversationId)">
+         <strong>{{c.author.username}}</strong> at {{c.updatedAt | date }} 
+    </li>
+  </ul>
+</div> 
+
+<!-- <ul> 
+    <li *ngFor="let c of conversations" (click)="onSelectConversation(c.conversationId)"> 
+         <strong>{{c.author.username}}</strong> at {{c.updatedAt | date }} 
+    </li>
+  </ul> -->

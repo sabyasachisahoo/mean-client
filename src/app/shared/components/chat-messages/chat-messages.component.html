@@ -1,0 +1,6 @@
+<ul class="wrapper">
+    <li *ngFor="let message of getConv?.conversations">
+      <p><span class="name">{{message.username}}</span> <span class="timestamp">{{message.timestamp | date}}</span></p>
+      <p>{{message.body}}</p>
+    </li>
+  </ul>
